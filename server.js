@@ -11,7 +11,9 @@ const __dirname = dirname(fileURLToPath(
 const app = express();
 
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://leonardo-portafolio-web.netlify.app/'
+}));
 
 
 
