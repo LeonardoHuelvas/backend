@@ -1,11 +1,11 @@
 const express = require("express");
-const path = require("path");
+const data = require("./Data.js"); // Importa la data desde Data.js
 const port = process.env.PORT || 3000;
 
 const app = express();
 
-app.get("/data", (req, res) => {
-    res.sendFile(path.join(__dirname, "Data.js"));
+app.get("/", (req, res) => {
+    res.json(data); // Envía la data como JSON
 });
 
 app.listen(port, () => {
