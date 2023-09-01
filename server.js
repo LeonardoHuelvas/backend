@@ -12,10 +12,12 @@ const app = express();
 
 
 app.use(cors({
-    origin: 'https://leonardo-portafolio-web.netlify.app/',
+    origin: 'https://leonardo-portafolio-web.netlify.app',
     methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
 }));
+
 
 
 
