@@ -21,9 +21,14 @@ app.use(cors({
 app.use('/certificates', express.static(path.join(__dirname, 'certificates')));
 
 
-app.get('/api/certificates', (req, res) => {
+app.get('/', (req, res) => {
     res.json(certificates);
 });
+
+
+//app.get('/api/certificates', (req, res) => {
+ //   res.json(certificates);
+//});
 
 
 // Catch-all para enviar index.html y dejar que React Router maneje la ruta
